@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('foods.urls')),
+    # path('', include('foods.urls')),
     path('foods/', include('foods.urls')),
     path('menus/', include('menus.urls')),
     path('cities/', include('cities.urls')),
-]
+    path('timer/', include('timer.urls')),
+    path('', include('events.urls', namespace='events')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
