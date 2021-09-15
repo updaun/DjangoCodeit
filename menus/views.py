@@ -8,3 +8,6 @@ def index(request):
     today = str(datetime.now().date())
     context = {"date":today}
     return render(request, 'menus/index.html', context=context)
+
+def detail(request, menu):
+    return render(request, 'menus/detail.html')
