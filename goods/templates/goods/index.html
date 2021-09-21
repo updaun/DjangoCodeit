@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% load humanize %}
+
+{% block product-list %}
+
+  {% for product in products %}
+  <div class="product">
+    <a class="product" href="#"></a>
+    <img src={% get_static_prefix %}{{product.img_path}} width="225px">
+    <div class="product-name">{{product.name}}</div>
+    <div class="product-price">{{product.price | intcomma}}</div>
+    </a> 
+  </div>
+  {% endfor %}
+
+{% endblock product-list %}

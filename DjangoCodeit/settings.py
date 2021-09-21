@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'cities',
     'timer',
     'events',
+    'goods',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [

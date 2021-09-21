@@ -1,4 +1,4 @@
 from django.contrib import admin
-from foods.models import Menu
+from goods.models import Product
 # Register your models here.
-admin.site.register(Menu)
+admin.site.register(Product)
